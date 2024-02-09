@@ -7,14 +7,14 @@ const url = "http://localhost:3000/products";
 function App() {
   const [products, setProducts] = useState([]);
 
-  const { data : items, httpConfig, loading } = useFetch(url);
+  const { data : items, httpConfig, loading, error, msgReturn, statusReturn } = useFetch(url);
   //console.log(data);
 
   const [name, setName] = useState("");
-  const [gorduras_totais, setGordura] = useState("");
-  const [carboidratos, setCarboidrato] = useState("");
-  const [proteinas, setProteinas] = useState("");
-  const [price, setPrice] = useState("");
+  const [gorduras_totais, setGordura] = useState(0);
+  const [carboidratos, setCarboidrato] = useState(0);
+  const [proteinas, setProteinas] = useState(0);
+  const [price, setPrice] = useState(0);
   // 1. Resgatando dados
   /*useEffect( 
     () => {
@@ -47,44 +47,62 @@ function App() {
     httpConfig(product,"POST");
 
     setName(""); 
-    setGordura(""); 
-    setCarboidrato(""); 
+    setGordura(0); 
+    setCarboidrato(0); 
     setProteinas(""); 
     setPrice("");
   };
+
+  // Remove
+  const handleRemove = (id) => {
+    httpConfig(id, "DELETE");
+  };
   
+
+
   //Render
   return (
     <div className="App">
       <h1>Adicionar Item</h1>
 
       <div className='add-product'>
-
+        
         <form onSubmit={handleSubmit}>
 
-        <label>
-            Nome do Produto: <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <label> <span>Nome do Produto:</span> <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} /></label>
+          <label>
+            <span>Gordura:</span> <input type="number" name="gorduras_totais" value={gorduras_totais} onChange={(e) => setGordura(e.target.value)} />
           </label>
           <label>
-            Gordura: <input type="number" name="gorduras_totais" value={gorduras_totais} onChange={(e) => setGordura(e.target.value)} />
+          <span>Carboidrato:</span> <input type="number" name="carboidratos" value={carboidratos} onChange={(e) => setCarboidrato(e.target.value)} />
           </label>
           <label>
-            Carboidrato: <input type="number" name="carboidratos" value={carboidratos} onChange={(e) => setCarboidrato(e.target.value)} />
+          <span>Proteína:</span> <input type="number" name="proteinas" value={proteinas} onChange={(e) => setProteinas(e.target.value)} />
           </label>
           <label>
-            Proteína: <input type="number" name="proteinas" value={proteinas} onChange={(e) => setProteinas(e.target.value)} />
+          <span>Preço:</span> <input type="number" name="price" value={price} onChange={(e) => setPrice(e.target.value)} />
           </label>
-          <label>
-            Preço: <input type="number" name="price" value={price} onChange={(e) => setPrice(e.target.value)} />
-          </label>
-          <input type="submit" value="Criar" />
-
+          {!loading && (
+            <input type="submit" value="Adicionar Item"  />
+          )}
+          {loading && (
+            <input type="submit" value="Adicionar Item" disabled />
+          )}
         </form>
-
+        
       </div>
 
-      <h2>Lista de Receitas</h2>
+      <h2>Lista de Produtos</h2>
+      
       {loading && <p>Carregando dados...</p>}
+      {msgReturn && !statusReturn &&
+        (<p>Item removido com sucesso!</p>)
+      }
+      {msgReturn && statusReturn &&
+        (<p>Item <strong>{msgReturn}</strong> foi adicionando com sucesso!</p>)
+      }
+      {error && <p>Erro: {error}</p>}
+
       {!loading &&(
         <ul>
           { 
@@ -97,6 +115,8 @@ function App() {
                     <li>Carboidrato: {product.carboidratos}</li>
                     <li>Proteína: {product.proteinas}</li>
                     <li>Preço: {product.price}</li>
+                    <button onClick={()=> handleRemove(product.id)}>Remover Item</button>
+
                   </ul>
                 </li>
               )

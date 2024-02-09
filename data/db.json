@@ -1,20 +1,12 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Aspargo",
-      "gorduras_totais": 0.1,
-      "carboidratos": 3.9,
-      "proteinas": 2.2,
-      "price": 10.99
-    },
-    {
-      "id": "80eb",
-      "name": "Pipoca",
-      "gorduras_totais": "3",
-      "carboidratos": "1",
-      "proteinas": "5",
-      "price": "10"
+      "id": "710a",
+      "name": "Renato S Nascimento",
+      "gorduras_totais": 0,
+      "carboidratos": 0,
+      "proteinas": 0,
+      "price": 0
     }
   ]
 }

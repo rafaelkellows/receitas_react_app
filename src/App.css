@@ -36,8 +36,13 @@
 .App ul ul{ display: block; padding: 5px; } 
 .App ul li:hover ul{ display: block; } 
 
-.add-product form{ background: #cce7c6; padding: 20px 0; width: 70%; margin: auto;}
-.add-product form label{ display: inline-block; width: 100%; padding: 0 0 10px; }
+.add-product form{ background: #cce7c6; padding: 20px; width: 100%; margin: auto; }
+.add-product form label{ display: inline-block; vertical-align: top; width: 15%; padding: 0 0 10px; }
+.add-product form label span{ display: block; font-weight: bold; }
+.add-product form input[type=text],.add-product form input[type=number]{ font-size: 14px; padding: 10px 25px; border: none; margin-top: 5px; border: 1px solid #aaaaaa;  }
+.add-product form input[type=submit]{ 
+  cursor: pointer;
+  display: block; margin: auto; background-color: green; color: #fff; font-size: 14px; padding: 10px 25px; border: none; margin-top: 25px; }
 
 @keyframes App-logo-spin {
   from {
