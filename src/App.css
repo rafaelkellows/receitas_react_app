@@ -28,12 +28,13 @@
   color: #61dafb;
 }
 .App ul, .App ul li{ list-style: none; list-style-type: none; margin: 0; padding: 0; } 
-.App ul li{ margin: 0 10% 5px; cursor: pointer;} 
+.App ul li{ margin: 0 1% 5px; cursor: pointer;} 
+.App > ul > li{ width: 24%; display: inline-block; vertical-align: top; } 
 .App ul li strong{ display: inline-block; width: 100%; padding: 10px; border: 1px solid #aaaaaa; background: #c2c2c2; transition: background .5s; } 
 .App ul li:hover strong{ background-color: #efddbf;} 
 
-.App ul ul{ display: none; padding: 5px; } 
-.App ul li:hover ul{ /*display: block;*/ } 
+.App ul ul{ display: block; padding: 5px; } 
+.App ul li:hover ul{ display: block; } 
 
 .add-product form{ background: #cce7c6; padding: 20px 0; width: 70%; margin: auto;}
 .add-product form label{ display: inline-block; width: 100%; padding: 0 0 10px; }

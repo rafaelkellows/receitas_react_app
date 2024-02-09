@@ -7,7 +7,7 @@ const url = "http://localhost:3000/products";
 function App() {
   const [products, setProducts] = useState([]);
 
-  const { data : items } = useFetch(url);
+  const { data : items, httpConfig, loading } = useFetch(url);
   //console.log(data);
 
   const [name, setName] = useState("");
@@ -26,21 +26,34 @@ function App() {
       fetchData();
     },[]);*/
     //console.log(products);
+    
   // 2. Adicionando dados
   const handleSubmit = async(e) => {
-    e.preventDefault()
+
+    e.preventDefault();
+
     const product = { name, gorduras_totais, carboidratos, proteinas, price, };
 
-    const res = await fetch(url,{
+    /*const res = await fetch(url,{
       method: "POST",
       headers: { "Content-Type":"application/json",},
       body: JSON.stringify(product),
-    })
-    const addedProducts = await res.json();
-    setProducts( (prevProducts) => [...prevProducts, addedProducts]);
-    setName(""); setGordura(""); setCarboidrato(""); setProteinas(""); setPrice("");
-  };
+    });
 
+    const addedProducts = await res.json();
+    setProducts( (prevProducts) => [...prevProducts, addedProducts]);*/
+
+    // Refaturando Post
+    httpConfig(product,"POST");
+
+    setName(""); 
+    setGordura(""); 
+    setCarboidrato(""); 
+    setProteinas(""); 
+    setPrice("");
+  };
+  
+  //Render
   return (
     <div className="App">
       <h1>Adicionar Item</h1>
@@ -71,23 +84,26 @@ function App() {
       </div>
 
       <h2>Lista de Receitas</h2>
-      <ul>
-        { 
-          items && items.map(
-            (product) => (
-              <li key={product.id}>
-                <strong>{product.name}</strong>
-                <ul>
-                  <li>Gordura: {product.gorduras_totais}</li>
-                  <li>Carboidrato: {product.carboidratos}</li>
-                  <li>Proteína: {product.proteinas}</li>
-                  <li>Preço: {product.price}</li>
-                </ul>
-              </li>
-            )
-          ) 
-        }
-      </ul>
+      {loading && <p>Carregando dados...</p>}
+      {!loading &&(
+        <ul>
+          { 
+            items && items.map( 
+              (product) => (
+                <li key={product.id}>
+                  <strong>{product.name}</strong>
+                  <ul>
+                    <li>Gordura: {product.gorduras_totais}</li>
+                    <li>Carboidrato: {product.carboidratos}</li>
+                    <li>Proteína: {product.proteinas}</li>
+                    <li>Preço: {product.price}</li>
+                  </ul>
+                </li>
+              )
+            ) 
+          }
+        </ul>
+      )}
     </div> 
   );
 }

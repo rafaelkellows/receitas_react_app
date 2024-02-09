@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Aspargo",
       "gorduras_totais": 0.1,
       "carboidratos": 3.9,
@@ -9,54 +9,12 @@
       "price": 10.99
     },
     {
-      "id": 2,
-      "name": "Alho-Poró",
-      "calorias": 61,
-      "gorduras_totais": 0.3,
-      "carboidratos": 14,
-      "proteinas": 1.5,
-      "price": 10.99
-    },
-    {
-      "id": 3,
-      "name": "Milho",
-      "calorias": 61,
-      "gorduras_totais": 0.3,
-      "carboidratos": 14,
-      "proteinas": 1.5,
-      "price": 10.99
-    },
-    {
-      "id": "bf6b",
+      "id": "80eb",
       "name": "Pipoca",
-      "gorduras_totais": "1.56",
-      "carboidratos": "2.36",
+      "gorduras_totais": "3",
+      "carboidratos": "1",
       "proteinas": "5",
-      "price": "5.99"
-    },
-    {
-      "id": "72cc",
-      "name": "Tomate",
-      "gorduras_totais": "0.6",
-      "carboidratos": "0.123",
-      "proteinas": "0.6",
-      "price": "2.99"
-    },
-    {
-      "id": "b18f",
-      "name": "Beterraba",
-      "gorduras_totais": "61",
-      "carboidratos": "0.3",
-      "proteinas": "14",
-      "price": "3.99"
-    },
-    {
-      "id": "7358",
-      "name": "Amendoim",
-      "gorduras_totais": "5",
-      "carboidratos": "7",
-      "proteinas": "8",
-      "price": "6.99"
+      "price": "10"
     }
   ]
 }
