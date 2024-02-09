@@ -4,9 +4,12 @@
 
 A ideia é **Desenvolver uma Plataforma capaz de Pesquisar e Sugerir Receitas** a partir de itens disponíveis em casa. 
 
+
+**Importante: Tenha ou instale o [Node ](https://nodejs.org/en) antes de prosseguir.**
+
 ## Como rodar a aplicação (Scripts)
 
-In the project directory, you can run:
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
