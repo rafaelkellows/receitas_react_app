@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Sobre o Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+É um projeto piloto que está sendo desenvolvido em React e sofrerá várias atualizações por fazer parte do meu treinamento [React do Zero a Maestria (c/ hooks, router, API, Projetos)](https://www.udemy.com/course/react-do-zero-a-maestria-c-hooks-router-api-projetos/). 
 
-## Available Scripts
+A ideia é **Desenvolver uma Plataforma capaz de Pesquisar e Sugerir Receitas** a partir de itens disponíveis em casa. 
+
+## Como rodar a aplicação (Scripts)
 
 In the project directory, you can run:
 
