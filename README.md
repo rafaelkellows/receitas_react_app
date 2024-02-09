@@ -9,7 +9,7 @@ A ideia é **Desenvolver uma Plataforma capaz de Pesquisar e Sugerir Receitas** 
 
 ## Como rodar a aplicação (Scripts)
 
-No diretório do projeto, você pode executar:
+Clone [Aplicação](git@github.com:rafaelkellows/receitas_react_app.git) para seu computador e no diretório do projeto, você executa:
 
 ### `npm start`
 
