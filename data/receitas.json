@@ -1,0 +1,34 @@
+{
+    "receitas" : 
+    [
+        { "id" : 1, "name": "Aspargo", "gorduras_totais": 0.1, "carboidratos": 3.9, "proteinas" : 2.2 },
+        { "id" : 2, "name": "Alho-Poró", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 3, "name": "Milho", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 4, "name": "Repolho Roxo", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 5, "name": "Beterraba", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        
+        { "id" : 6, "name": "Rabanete", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 7, "name": "Cenoura", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 8, "name": "Pepino", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 9, "name": "Acelga", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 10, "name": "Espinafre", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        
+        { "id" : 11, "name": "Berinjela", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 12, "name": "Cebola", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 13, "name": "Pimentão Vermelho", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 14, "name": "Brócolis", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 15, "name": "Repolho Verde  ", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+
+        { "id" : 16, "name": "Batata Lavada", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 17, "name": "Tomate", "calorias": 61, "gorduras_totais": 0.3, "carboidratos": 14, "proteinas" : 1.5 },
+        { "id" : 18, "name": "Cogumelo", "calorias": 22, "gorduras_totais": 0.3, "carboidratos": 3.3, "proteinas" : 3.1 },
+        { "id" : 19, "name": "Alcachofra", "calorias": 34, "gorduras_totais": 0.4, "carboidratos": 7, "proteinas" : 2.8 },
+        { "id" : 20, "name": "Batata Doce", "calorias": 86, "gorduras_totais": 0.1, "carboidratos": 20, "proteinas" : 1.6 },
+
+        { "id" : 21, "name": "Ervilha", "calorias": 81, "gorduras_totais": 0.4, "carboidratos": 14, "proteinas" : 5 },
+        { "id" : 22, "name": "Pimentão Amarelo", "calorias": 27, "gorduras_totais": 0.2, "carboidratos": 6, "proteinas" : 1 },
+        { "id" : 23, "name": "Cebola Roxa", "calorias": null, "gorduras_totais": 0.1, "carboidratos": 9.3, "proteinas" : 1.1 },
+        { "id" : 24, "name": "Pimenta Malageta", "calorias": 40, "gorduras_totais": 0.4, "carboidratos": 9, "proteinas" : 1.9 },
+        { "id" : 25, "name": "Alho", "calorias": null, "gorduras_totais": null, "carboidratos": 2.4, "proteinas" : 0.7 }
+    ]
+}
