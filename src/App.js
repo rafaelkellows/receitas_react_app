@@ -1,17 +1,22 @@
 import './App.css';
 import {useState, useEffect} from "react";
+import { useFetch } from './hooks/useFetch';
 
 const url = "http://localhost:3000/products";
 
 function App() {
   const [products, setProducts] = useState([]);
+
+  const { data : items } = useFetch(url);
+  //console.log(data);
+
   const [name, setName] = useState("");
   const [gorduras_totais, setGordura] = useState("");
   const [carboidratos, setCarboidrato] = useState("");
   const [proteinas, setProteinas] = useState("");
   const [price, setPrice] = useState("");
   // 1. Resgatando dados
-  useEffect( 
+  /*useEffect( 
     () => {
       async function fetchData(){
         const res = await fetch(url);
@@ -19,7 +24,7 @@ function App() {
         setProducts(data);
       }
       fetchData();
-    },[]);
+    },[]);*/
     //console.log(products);
   // 2. Adicionando dados
   const handleSubmit = async(e) => {
@@ -38,7 +43,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lista de Receitas</h1>
+      <h1>Adicionar Item</h1>
+
       <div className='add-product'>
 
         <form onSubmit={handleSubmit}>
@@ -63,9 +69,11 @@ function App() {
         </form>
 
       </div>
+
+      <h2>Lista de Receitas</h2>
       <ul>
         { 
-          products.map(
+          items && items.map(
             (product) => (
               <li key={product.id}>
                 <strong>{product.name}</strong>

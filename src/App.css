@@ -33,7 +33,7 @@
 .App ul li:hover strong{ background-color: #efddbf;} 
 
 .App ul ul{ display: none; padding: 5px; } 
-.App ul li:hover ul{ display: block; } 
+.App ul li:hover ul{ /*display: block;*/ } 
 
 .add-product form{ background: #cce7c6; padding: 20px 0; width: 70%; margin: auto;}
 .add-product form label{ display: inline-block; width: 100%; padding: 0 0 10px; }

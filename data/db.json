@@ -49,6 +49,14 @@
       "carboidratos": "0.3",
       "proteinas": "14",
       "price": "3.99"
+    },
+    {
+      "id": "7358",
+      "name": "Amendoim",
+      "gorduras_totais": "5",
+      "carboidratos": "7",
+      "proteinas": "8",
+      "price": "6.99"
     }
   ]
 }
